@@ -1,0 +1,134 @@
+<html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+
+
+</script>
+
+
+<script>
+
+$(document).ready(function(){
+
+$("#createNew").click(function(){
+
+//create form and submit button
+var formm = document.createElement("form");                       
+var b = document.createElement("Button");
+var t = document.createTextNode("Submit");    
+b.appendChild(t);
+formm.appendChild(b);
+
+
+//function to create textfield
+$("#createtext").click(function()
+{
+var text1 = document.createElement("input");
+text1.type="text";
+var lab1=document.createElement("label");
+var t1 = document.createTextNode("TextField");    
+lab1.appendChild(t1);
+formm.appendChild(text1);
+formm.appendChild(lab1);
+
+     
+});
+
+//function to create password
+$("#createpass").click(function()
+{
+var text2 = document.createElement("input");
+text2.type="password";
+var lab2=document.createElement("label");
+var t2 = document.createTextNode("Password");    
+lab2.appendChild(t2);
+
+formm.appendChild(text2);
+formm.appendChild(lab2);
+     
+});
+
+
+//function to create Radio Buttons
+$("#createradio").click(function()
+{
+var text3 = document.createElement("input");
+text3.type="radio";
+var lab3=document.createElement("label");
+var t3 = document.createTextNode("Radio Button 1");    
+lab3.appendChild(t3);
+
+formm.appendChild(text3);
+formm.appendChild(lab3);
+
+var text4 = document.createElement("input");
+text4.type="radio";
+var lab4=document.createElement("label");
+var t4 = document.createTextNode("Radio Button 2");    
+lab4.appendChild(t4);
+formm.appendChild(text4);
+     formm.appendChild(lab4);
+});
+
+
+$("#createselect").click(function()
+{
+var text5 = document.createElement("select");
+var text6 = document.createElement("option");
+text6.text("Option 1");
+text5.add(text6);
+formm.appendChild(text5);
+});
+
+$("#createcheck").click(function()
+{
+var text7 = document.createElement("input");
+text7.type="check";
+var lab5=document.createElement("label");
+var t5 = document.createTextNode("Check Box 1");    
+lab5.appendChild(t5);
+
+formm.appendChild(text7);
+formm.appendChild(lab5);
+
+var text8 = document.createElement("input");
+text8.type="check";
+var lab6=document.createElement("label");
+var t6 = document.createTextNode("Check Box 2");    
+lab6.appendChild(t6);
+formm.appendChild(text8);
+     formm.appendChild(lab6);
+});
+
+
+
+                                        
+document.getElementById("myDiv").appendChild(formm);  
+}
+);
+
+
+
+});
+
+</script>
+
+<body>
+
+<div id="divButton">   </div>
+
+<div id="myDiv">           </div>
+<div align="center" >
+<button id="createNew"> Create Form!   </button>
+</div>
+<div align="center">
+<button id="createtext" > Create TextField   </button>
+<button id="createpass"> Create Password   </button>
+<button id="createradio"> Create Radio Buttons   </button>
+<button id="createselect"> Create Select Button   </button>
+<button id="createcheck"> Create Check Buttons!   </button>
+</div>
+</body>
+
+</html>
